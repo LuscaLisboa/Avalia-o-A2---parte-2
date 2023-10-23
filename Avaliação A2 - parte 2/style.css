@@ -1,0 +1,240 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 25px;
+    box-sizing: border-box;
+}
+*::selection{
+    color: rgb(76, 249, 114);
+    background: rgba(0, 0, 0, 0.481);
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(wpp.jpg);
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 650px;
+}
+.title{
+
+}
+h1{
+    font-size: 2.9em;
+}
+.navbar{
+    position: sticky;
+    top: -0.1%;
+    display: flex;
+    background: rgb(94, 94, 94);
+    height: auto;
+    align-items: center;
+    justify-content: space-around;
+}
+.navbar a{
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+}
+.navbar a, .dropdown{
+    width: 100%;
+}
+.navbar a:hover{
+    background: rgba(0, 0, 0, 0.349);
+}
+.dropdown{
+    position: relative;
+}
+.dropdown a{
+    margin: 0;
+    display: block;
+    width: auto;
+}
+.dropdown:hover .content-drop{
+    display: block;
+}
+.content-drop{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgb(59, 59, 59);
+    width: 100%;
+}
+.content-drop a{
+    display: flex;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    font-size: 0.8em;
+    height: 50px;
+    align-items: center;
+}
+.content-drop a:hover{
+    background: rgb(20, 20, 20);
+}
+.corpo{
+    display: flex;
+    height: 2000px;
+}
+main{
+    flex-grow: 1;
+    background: rgba(155, 41, 41, 0.5);
+    padding: 20px;
+    max-height: auto;
+    overflow-y: auto;
+}
+.main-content{
+    margin: 20px 0 0 0;
+    height: auto;
+}
+.main-content > img{
+    top: 27.5px;
+    border-radius: 20px;
+    width: auto;
+    height: 200px;
+    object-fit: cover;
+}
+.main-galery{
+    margin-top: 30px;
+    --gap: 8px;
+    --num-cols: 4;
+    --row-height: 200px;
+
+    box-sizing: border-box;
+    padding: var(--gap);
+
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+}
+.main-galery > img{
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main-galery-col-2{
+    grid-column: span 2;
+}
+.main-galery-col-3{
+    grid-column: span 3;
+}
+.main-galery-col-4{
+    grid-column: span 4;
+}
+.main-galery-row-2{
+    grid-row: span 2;
+}
+aside{
+    width: auto;
+    max-width: 600px;
+    min-width: 100px;
+    background: rgba(110, 150, 168, 0.5);
+    padding: 20px;
+}
+aside > img{
+    display: flex;
+    border-radius: 20px;
+    width: auto;
+    height: 200px;
+    object-fit: cover;
+}
+h2{
+    font-size: 1.5em;
+}
+h3{
+    margin-top: 0;
+    font-size: 1.1em;
+}
+.right{
+    float: right;
+}
+.left{
+    float: left;
+}
+#acolyte{
+    width: 160px;
+    height: auto;
+    border-radius: 20px;
+}
+#knight{
+    width: 160px;
+    height: auto;
+}
+#ogre{
+    width: 160px;
+    height: auto;
+}
+footer{
+    display: flex;
+    background: rgb(30, 48, 4);
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+    
+}
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: rgba(0, 255, 166, 0.5);
+}
+::-webkit-scrollbar-thumb{
+    width: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (max-width: 480px) {
+    .navbar{
+        position: static;
+        flex-direction: column;
+        height: auto;
+    }
+    .navbar a{
+        display: flex;
+        width: 97%;
+        text-align: center;
+    }
+    .dropdown{
+        margin: 0;
+        padding: 0;
+        width: 97%;
+        text-align: center;
+    }
+    .dropdown a{
+        width: auto;
+    } 
+    .content-drop{
+        width: 99.%;
+        text-align: center;
+    }
+    .corpo{
+        flex-direction: column;
+        height: auto;
+    }
+    main{
+        width: auto;
+        height: auto;
+    }
+    .main-content > img{
+        width: 100%;
+        height: auto;
+    }
+    aside{
+        width: auto;
+        height: auto;
+    }
+    .main-galery{
+        --num-cols: 2;
+        --row-height: 200px;
+    }
+    
+}
